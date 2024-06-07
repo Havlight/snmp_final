@@ -1,10 +1,10 @@
-from pysnmp.hlapi import *
 from main import *
 
+# walk_snmp('10.91.0.27', '1.3.6.1.4.1.890.1.5.8.18.18')
+# walk_snmp('10.91.0.27', '	1.3.6.1.4.1.890.1.5.8.18.4')
+# print(walk_snmp('10.91.0.27', '	1.3.6.1.4.1.890.1.5.8.18.18.1.1'))
+# get_snmp('10.91.0.27', '1.3.6.1.4.1.890.1.5.8.18.12.1.1.3.2')
+"""SNMPv2-SMI::mib-2.17.4.3.1.1.44.115.160.142.94.95 = 0x2c73a08e5e5f
+SNMPv2-SMI::mib-2.17.4.3.1.1.80.247.34.153.5.14 = 0x50f72299050e
+SNMPv2-SMI::mib-2.17.4.3.1.1.124.16.201.173.124.188 = 0x7c10c9ad7cbc"""
 
-# 使用示例
-switch_ip = '10.91.0.27'
-community = 'public'
-
-traffic_data = walk_snmp(switch_ip, '1.3.6.1.2.1.1.3')
-print(traffic_data)

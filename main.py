@@ -4,12 +4,12 @@ from pysnmp.hlapi import *
 def split_varBind(varBind):
     varBind = str(varBind)
     parts = varBind.split("::")
-    name = parts[0]
+    mib = parts[0]
     oid = parts[1].split(" = ")[0]
     value = parts[1].split(" = ")[1]
 
     result = {
-        "name": name,
+        "mib": mib,
         "oid": oid,
         "value": value
     }
@@ -143,4 +143,4 @@ if __name__ == "__main__":
     # walk_snmp(target, oid)
     # set_snmp(target, oid, 1, Integer)
     # set_table_entry(target, oid, 2, 2, 300, Integer)
-    # get_cdp_tables(target, table_entries)
+    print(get_cdp_tables(target, table_entries))

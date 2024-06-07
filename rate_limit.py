@@ -42,7 +42,7 @@ def set_port_In_rate_limit(value, row=1):
     启用或禁用指定port交换机的速率限制
     """
     target = '10.91.0.27'  # 替换为你的交换机IP
-    oid = '	1.3.6.1.4.1.890.1.5.8.18.2.2.1.2.' + str(row)
+    oid = '1.3.6.1.4.1.890.1.5.8.18.2.2.1.2.' + str(row)
     if not 64 < value < 100000:
         print("fail")
         print("range of FE port is between 64 and 100,000")
@@ -55,7 +55,7 @@ def set_port_Out_rate_limit(value, row=1):
     启用或禁用指定port交换机的速率限制
     """
     target = '10.91.0.27'  # 替换为你的交换机IP
-    oid = '	1.3.6.1.4.1.890.1.5.8.18.2.2.1.3.' + str(row)
+    oid = '1.3.6.1.4.1.890.1.5.8.18.2.2.1.3.' + str(row)
     if not 64 < value < 100000:
         print("fail")
         print("range of FE port is between 64 and 100,000")
@@ -71,5 +71,7 @@ if __name__ == "__main__":
     egress_rate = 128000  # 出口速率限制，单位为Kbit/s
     target = '10.91.0.27'  # 替换为你的交换机IP
 
-    set_port_Out_rate_limit(64)
-    get_rateLimitPortTable()
+    # set_port_Out_rate_limit(64)
+    # get_rateLimitPortTable()
+    # get_rateLimitPortTable()
+    get_rateLimitState()
